@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-class MyAnimatedContainerApp extends StatelessWidget {
+class OpacityAnimationApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     String appTitle = "Opacity Animation";

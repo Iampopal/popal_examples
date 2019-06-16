@@ -34,10 +34,15 @@ dev_dependencies:
 
 # The following section is specific to Flutter.
 flutter:
+  fonts:
+    - family: Abel
+      fonts:
+        - asset: fonts/Abel-Regular.ttf
 
-  # The following line ensures that the Material Icons font is
-  # included with your application, so that you can use the icons in
-  # the material Icons class.
+    - family: Raleway
+      fonts:
+        - asset: fonts/Raleway-Regular.ttf
+
   uses-material-design: true
   assets:
     - images/me.jpg
@@ -74,3 +79,4 @@ flutter:
   #
   # For details regarding fonts from package dependencies,
   # see https://flutter.io/custom-fonts/#from-packages
+

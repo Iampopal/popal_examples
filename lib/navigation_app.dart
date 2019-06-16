@@ -5,12 +5,12 @@ class NavigationApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: "Navigation",
-      home: FirstRoute(),
+      home: FirstRouteDemo(),
     );
   }
 }
 
-class FirstRoute extends StatelessWidget {
+class FirstRouteDemo extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(

@@ -30,12 +30,19 @@ class _SimpleWidgetState extends State<SimpleAppPage> {
     if (toggle) {
       return RaisedButton(
         onPressed: () {},
-        child: Text("Toggle One"),
+        child: Text("Button"),
       );
     } else {
-      return MaterialButton(
-        onPressed: () {},
-        child: Text("Toggle Two"),
+      return Container(
+        color: Colors.red[700],
+        width: 200,
+        height: 200,
+        child: Center(
+          child: Text(
+            "Container",
+            style: TextStyle(color: Colors.white),
+          ),
+        ),
       );
     }
   }

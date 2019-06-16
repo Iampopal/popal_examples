@@ -1,42 +1,100 @@
 import 'package:flutter/material.dart';
+import 'package:popal_examples/animated_app.dart';
+import 'package:popal_examples/animated_container.dart';
 import 'package:popal_examples/drawer.dart';
-import 'package:popal_examples/hero2.dart';
+import 'package:popal_examples/drawing.dart';
+import 'package:popal_examples/form_app.dart';
+import 'package:popal_examples/friendly_chat.dart';
+import 'package:popal_examples/hero1.dart';
+import 'package:popal_examples/navigation_app.dart';
+import 'package:popal_examples/package_font.dart';
+import 'package:popal_examples/snackbar.dart';
+import 'package:popal_examples/toggle_widget.dart';
+import 'package:popal_examples/ui_orientation.dart';
 
-//Form
-// void main() => runApp(FormApp());
+void main() => runApp(MyApp());
 
-//Navigation
-// void main() => runApp(NavigationApp());
+class MyApp extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      title: 'Popal Examples',
+      home: Scaffold(
+        appBar: AppBar(
+          title: Text('Popal Examples'),
+        ),
+        body: AppBody(),
+      ),
+    );
+  }
+}
 
-//Friendly chat
-// void main() => runApp(FriendlyChat());
+//Button That Route user to other page
+class RouteButton extends StatelessWidget {
+  RouteButton({this.text, this.widget});
+  final String text;
+  final Widget widget;
 
-//Add remove widget
-// void main() => runApp(ToggleWidget());
+  @override
+  Widget build(BuildContext context) {
+    return RaisedButton(
+      onPressed: () {
+        var route = MaterialPageRoute(builder: (context) => widget);
+        Navigator.push(context, route);
+      },
+      child: Text(text),
+    );
+  }
+}
 
-//Drawing Fade
-// void main() => runApp(BasicDrawing());
+class AppBody extends StatelessWidget {
+  const AppBody({
+    Key key,
+  }) : super(key: key);
 
-//Animation Examples
-// void main() => runApp(Animation3());
+  @override
+  Widget build(BuildContext context) {
+    return ListView(
+      children: <Widget>[
+        //! Simple Form With Validation
+        RouteButton(
+          text: "Simple Form with Validation",
+          widget: FormDemo(appTitle: "Simple Form with Validation"),
+        ),
 
-//Animated Container
-// void main() => runApp(AnimatedContainerApp());
+        //! Navigator Raouter
+        RouteButton(text: 'Navigator Raouter', widget: NavigationApp()),
 
-//Hero
-// void main() => runApp(Hero1());
+        //! Friendly Chat
+        RouteButton(text: 'Friendly chat', widget: FriendlyChat()),
 
-//hero 2
-// void main() => runApp(RadialExpansionDemo());
+        //! Add Remove Widget
+        RouteButton(text: 'Add remove widget', widget: ToggleWidget()),
 
-//* Animated Container
-// void main() => runApp(MyAnimatedContainerApp());
+        //! Drawing Fade
+        RouteButton(text: 'Drawing Fade', widget: BasicDrawing()),
 
-//* Drawer
-void main() => runApp(MyDrawerApp());
+        //! Animated Container
+        RouteButton(text: 'Animated Container', widget: AnimatedContainerApp()),
 
-//hello world
-//hello world
+        //! My Animated Container
+        RouteButton(text: 'Opacity Animation', widget: OpacityAnimationApp()),
 
-//hiii
-//woooooooooooo
+        //!Hero 1
+        RouteButton(text: 'Hero 1', widget: Hero1()),
+
+        //! My Drawer App
+        RouteButton(text: 'My Drawer App', widget: MyDrawerApp()),
+
+        //! My Snack bar App
+        RouteButton(text: 'SnackBar', widget: SnackbarDemo()),
+
+        //! Font Asset
+        RouteButton(text: 'Font Assets', widget: PackageFontApp()),
+
+        //! Ui Oientation
+        RouteButton(text: 'Ui Orientation', widget: UiOrientationApp()),
+      ],
+    );
+  }
+}

@@ -12,7 +12,7 @@ class AnimationFade extends StatelessWidget {
 
 class FadeAppPage extends StatefulWidget {
   FadeAppPage({Key key, this.title}) : super(key: key);
-  String title;
+  final String title;
 
   _FadeAppPageState createState() => _FadeAppPageState();
 }
