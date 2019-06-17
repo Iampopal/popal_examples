@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 class UiOrientationApp extends StatelessWidget {
-  String appTitle = 'Ui Orientation';
+  final String appTitle = 'Ui Orientation';
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -19,7 +19,6 @@ class OrientationHome extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    int i = 0;
     return Scaffold(
         appBar: AppBar(
           title: Text(appTitle),

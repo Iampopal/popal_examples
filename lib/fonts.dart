@@ -1,12 +1,13 @@
 import 'package:flutter/material.dart';
 
-void main() => runApp(PackageFontApp());
+void main() => runApp(FontApp());
 
-class PackageFontApp extends StatelessWidget {
+class FontApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Package Fonts',
+      theme: ThemeData(fontFamily: 'Abel'),
       home: MyHomePage(),
     );
   }
@@ -24,15 +25,19 @@ class MyHomePage extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.center,
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
+            Text('Default Font\n', style: TextStyle(fontSize: 21.0)),
             Text(
-              'Using the Able Font \n\n',
+              'Using the Able Font \n',
               style: TextStyle(fontFamily: 'Abel', fontSize: 21.0),
             ),
             Text(
-              'Using the Relayway Font \n\n',
+              'Using the Relayway Font \n',
               style: TextStyle(fontFamily: 'Relayway', fontSize: 21.0),
             ),
-            Text('Without Any Font', style: TextStyle(fontSize: 21.0)),
+            Text(
+              'One more',
+              style: TextStyle(fontSize: 21),
+            )
           ],
         ),
       ),
