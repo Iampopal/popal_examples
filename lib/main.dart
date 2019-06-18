@@ -1,21 +1,21 @@
 import 'package:flutter/material.dart';
-import 'package:popal_examples/animated_app.dart';
-import 'package:popal_examples/animated_container.dart';
-import 'package:popal_examples/drawer.dart';
-import 'package:popal_examples/drawing.dart';
-import 'package:popal_examples/form_app.dart';
-import 'package:popal_examples/friendly_chat.dart';
-import 'package:popal_examples/hero1.dart';
-import 'package:popal_examples/layout.dart';
-import 'package:popal_examples/navigation_app.dart';
-import 'package:popal_examples/fonts.dart';
-import 'package:popal_examples/provide_counter.dart';
-import 'package:popal_examples/provider/shopper/shopper_main.dart';
-import 'package:popal_examples/snackbar.dart';
-import 'package:popal_examples/tabs.dart';
-import 'package:popal_examples/themes.dart';
-import 'package:popal_examples/toggle_widget.dart';
-import 'package:popal_examples/ui_orientation.dart';
+import 'package:popal_examples/animation/hero1.dart';
+import 'package:popal_examples/design/drawer.dart';
+import 'package:popal_examples/design/fonts.dart';
+import 'package:popal_examples/design/snackbar.dart';
+import 'package:popal_examples/design/tabs.dart';
+import 'package:popal_examples/design/themes.dart';
+import 'package:popal_examples/design/ui_orientation.dart';
+import 'package:popal_examples/examples/drawing.dart';
+import 'package:popal_examples/examples/friendly_chat.dart';
+import 'package:popal_examples/examples/layout.dart';
+import 'package:popal_examples/examples/toggle_widget.dart';
+import 'package:popal_examples/forms/form_app.dart';
+import 'package:popal_examples/navigation/navigation_app.dart';
+import 'package:popal_examples/providers/provide_counter.dart';
+import 'package:popal_examples/providers/shopper_provider/shopper_main.dart';
+import 'animation/animated_app.dart';
+import 'animation/animated_container.dart';
 
 void main() => runApp(MyApp());
 
@@ -159,11 +159,12 @@ class AppBody extends StatelessWidget {
         //! Tab Example
         ExampleButton(text: 'Tab App', widget: TabsApp()),
 
-        //! Tab Example
-        ExampleButton(text: 'Shopper Provider', widget: MyAppShopper()),
-
         //! Counter Provier
         ExampleButton(text: 'Counter Provider', widget: ProviderCounterApp()),
+
+        //! Counter Provier
+        ExampleButton(
+            text: 'My Shopper Provider', widget: MyShopperProviderApp()),
       ],
     );
   }

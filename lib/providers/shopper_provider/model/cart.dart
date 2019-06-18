@@ -20,7 +20,7 @@ const _itemsNames = [
   'Currying',
 ];
 
-class MyCart extends ChangeNotifier {
+class MyCartModel extends ChangeNotifier {
   List<Item> _items = [];
 
   UnmodifiableListView<Item> get items => UnmodifiableListView(_items);
@@ -31,13 +31,18 @@ class MyCart extends ChangeNotifier {
     _items.add(item);
     notifyListeners();
   }
+
+  void removeItem(Item item) {
+    _items.remove(item);
+    notifyListeners();
+  }
 }
 
 class Item {
   final int id;
   final String name;
 
-  Item(this.id, this.name);
+  Item(this.id) : name = _itemsNames[id % _itemsNames.length];
 
   @override
   int get hashCode => id;
