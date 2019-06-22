@@ -10,7 +10,14 @@ import 'package:popal_examples/examples/drawing.dart';
 import 'package:popal_examples/examples/friendly_chat.dart';
 import 'package:popal_examples/examples/layout.dart';
 import 'package:popal_examples/examples/toggle_widget.dart';
+import 'package:popal_examples/forms/focus_design_text_field.dart';
 import 'package:popal_examples/forms/form_app.dart';
+import 'package:popal_examples/forms/retrive_text_input.dart';
+import 'package:popal_examples/gestures/guestureDetector.dart';
+import 'package:popal_examples/gestures/inkwell.dart';
+import 'package:popal_examples/gestures/swipe_dismiss.dart';
+import 'package:popal_examples/images/network_image.dart';
+import 'package:popal_examples/list/grid_list.dart';
 import 'package:popal_examples/navigation/navigation_app.dart';
 import 'package:popal_examples/providers/provide_counter.dart';
 import 'package:popal_examples/providers/shopper_provider/shopper_main.dart';
@@ -105,19 +112,22 @@ class AppBody extends StatelessWidget {
   Widget build(BuildContext context) {
     return GridView.count(
       crossAxisCount: 2,
-      childAspectRatio: MediaQuery.of(context).size.height / 200,
+      childAspectRatio: MediaQuery.of(context).size.height / 160,
       children: <Widget>[
-        //! Simple Form With Validation
-        ExampleButton(
-          text: "Layout",
-          widget: LayoutApp(),
-        ),
+        //! Layout
+        ExampleButton(text: "Layout", widget: LayoutApp()),
 
         //! Simple Form With Validation
         ExampleButton(
-          text: "Simple Form ",
-          widget: FormDemo(appTitle: "Simple Form"),
-        ),
+            text: "Form With Validation", widget: FormWithValidationApp()),
+
+        //! Focus Text Field
+        ExampleButton(
+            text: "Focus+Design Text Field", widget: FocusDesginTextFieldApp()),
+
+        //! Retrive Text on Change
+        ExampleButton(
+            text: "Retrive Text+/Field", widget: RetriveTextFieldApp()),
 
         //! Navigator Raouter
         ExampleButton(text: 'Route Screen', widget: NavigationApp()),
@@ -165,6 +175,21 @@ class AppBody extends StatelessWidget {
         //! Counter Provier
         ExampleButton(
             text: 'My Shopper Provider', widget: MyShopperProviderApp()),
+
+        //! Ripple Button
+        ExampleButton(text: 'InkWell Tap', widget: InkWellApp()),
+
+        //! Ripple Button
+        ExampleButton(text: 'Guesture Tap', widget: GestureDetuctorApp()),
+
+        //! Ripple Button
+        ExampleButton(text: 'Swipable Dismiss', widget: SwipableApp()),
+
+        //! Image Network
+        ExampleButton(text: 'Image Network', widget: NetworkImageApp()),
+
+        //! Grid List
+        ExampleButton(text: 'Grid List', widget: GridListApp()),
       ],
     );
   }

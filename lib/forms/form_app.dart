@@ -1,18 +1,18 @@
 import 'package:flutter/material.dart';
 
-class FormApp extends StatelessWidget {
+class FormWithValidationApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final appTitle = "Form Validation";
     return MaterialApp(
       title: appTitle,
-      home: new FormDemo(appTitle: appTitle),
+      home: MyApp(appTitle: appTitle),
     );
   }
 }
 
-class FormDemo extends StatelessWidget {
-  const FormDemo({
+class MyApp extends StatelessWidget {
+  const MyApp({
     Key key,
     @required this.appTitle,
   }) : super(key: key);
@@ -54,6 +54,8 @@ class _MyCustomFormState extends State<MyCustomForm> {
               Column(
                 children: <Widget>[
                   TextFormField(
+                    //*Automatically Focus as Starts
+                    autofocus: true,
                     controller: textEditingController,
                     validator: (value) {
                       text = value;
