@@ -17,7 +17,13 @@ import 'package:popal_examples/gestures/guestureDetector.dart';
 import 'package:popal_examples/gestures/inkwell.dart';
 import 'package:popal_examples/gestures/swipe_dismiss.dart';
 import 'package:popal_examples/images/network_image.dart';
+import 'package:popal_examples/list/basic_list.dart';
+import 'package:popal_examples/list/floating_appbar_list.dart';
 import 'package:popal_examples/list/grid_list.dart';
+import 'package:popal_examples/list/horizontal_list.dart';
+import 'package:popal_examples/list/mixed_list.dart';
+import 'package:popal_examples/list/long_list.dart';
+import 'package:popal_examples/navigation/hero_animation.dart';
 import 'package:popal_examples/navigation/navigation_app.dart';
 import 'package:popal_examples/providers/provide_counter.dart';
 import 'package:popal_examples/providers/shopper_provider/shopper_main.dart';
@@ -111,8 +117,8 @@ class AppBody extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return GridView.count(
-      crossAxisCount: 2,
-      childAspectRatio: MediaQuery.of(context).size.height / 160,
+      crossAxisCount: 3,
+      childAspectRatio: MediaQuery.of(context).size.height / 200,
       children: <Widget>[
         //! Layout
         ExampleButton(text: "Layout", widget: LayoutApp()),
@@ -147,9 +153,6 @@ class AppBody extends StatelessWidget {
 
         //! My Animated Container
         ExampleButton(text: 'Opacity Animation', widget: OpacityAnimationApp()),
-
-        //!Hero 1
-        ExampleButton(text: 'Hero 1', widget: Hero1()),
 
         //! My Drawer App
         ExampleButton(text: 'My Drawer App', widget: MyDrawerApp()),
@@ -190,6 +193,28 @@ class AppBody extends StatelessWidget {
 
         //! Grid List
         ExampleButton(text: 'Grid List', widget: GridListApp()),
+
+        //! Horizontal List
+        ExampleButton(text: 'Horizontal List', widget: HorizontalListApp()),
+
+        //! Mixed List
+        ExampleButton(text: 'Mixed List', widget: MixedListApp()),
+
+        //! Floating Appbar List
+        ExampleButton(
+            text: 'Floating Appbar List', widget: FloatingAppbarListApp()),
+
+        //! Long List
+        ExampleButton(text: 'Basic List', widget: BasicListApp()),
+
+        //! Long List
+        ExampleButton(text: 'Long List', widget: LongListApp()),
+
+        //! Hero Animation
+        ExampleButton(text: 'Hero Animation', widget: HeroAnimationApp()),
+
+        //! Hero 1
+        ExampleButton(text: 'Hero 1', widget: Hero1()),
       ],
     );
   }

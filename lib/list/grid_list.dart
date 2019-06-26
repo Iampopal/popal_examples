@@ -11,15 +11,19 @@ class GridListApp extends StatelessWidget {
           title: Text(appTitle),
         ),
         body: GridView.count(
-            crossAxisCount: 2,
-            children: List.generate(100, (indext) {
+          crossAxisCount: 2,
+          children: List.generate(
+            100,
+            (index) {
               return Center(
                 child: Text(
-                  'Item $indext',
+                  'Item ' + (index + 1).toString(),
                   style: Theme.of(context).textTheme.headline,
                 ),
               );
-            })),
+            },
+          ),
+        ),
       ),
     );
   }
