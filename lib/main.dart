@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:popal_examples/animation/hero1.dart';
+import 'package:popal_examples/navigation/hero1.dart';
 import 'package:popal_examples/design/drawer.dart';
 import 'package:popal_examples/design/fonts.dart';
 import 'package:popal_examples/design/snackbar.dart';
@@ -24,7 +24,10 @@ import 'package:popal_examples/list/horizontal_list.dart';
 import 'package:popal_examples/list/mixed_list.dart';
 import 'package:popal_examples/list/long_list.dart';
 import 'package:popal_examples/navigation/hero_animation.dart';
+import 'package:popal_examples/navigation/navigate_name.dart';
+import 'package:popal_examples/navigation/navigate_with_argument.dart';
 import 'package:popal_examples/navigation/navigation_app.dart';
+import 'package:popal_examples/navigation/pass_data.dart';
 import 'package:popal_examples/providers/provide_counter.dart';
 import 'package:popal_examples/providers/shopper_provider/shopper_main.dart';
 import 'animation/animated_app.dart';
@@ -90,11 +93,11 @@ class _ExampleButtonState extends State<ExampleButton> {
             children: <Widget>[
               Container(
                 height: double.maxFinite,
-                width: 40,
+                padding: EdgeInsets.symmetric(horizontal: 4.0),
                 child: Center(
                   child: Text(
                     "$currentExampleNo",
-                    style: Theme.of(context).textTheme.headline,
+                    style: Theme.of(context).textTheme.title,
                   ),
                 ),
               ),
@@ -117,8 +120,8 @@ class AppBody extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return GridView.count(
-      crossAxisCount: 3,
-      childAspectRatio: MediaQuery.of(context).size.height / 200,
+      crossAxisCount: 2,
+      childAspectRatio: MediaQuery.of(context).size.height / 140,
       children: <Widget>[
         //! Layout
         ExampleButton(text: "Layout", widget: LayoutApp()),
@@ -134,9 +137,6 @@ class AppBody extends StatelessWidget {
         //! Retrive Text on Change
         ExampleButton(
             text: "Retrive Text+/Field", widget: RetriveTextFieldApp()),
-
-        //! Navigator Raouter
-        ExampleButton(text: 'Route Screen', widget: NavigationApp()),
 
         //! Friendly Chat
         ExampleButton(text: 'Friendly chat', widget: FriendlyChat()),
@@ -215,6 +215,20 @@ class AppBody extends StatelessWidget {
 
         //! Hero 1
         ExampleButton(text: 'Hero 1', widget: Hero1()),
+
+        //! Navigator Raouter
+        ExampleButton(text: 'Navigatie and back', widget: NavigationBackApp()),
+
+        //! Navigate to Named Route
+        ExampleButton(
+            text: "Navigate to Named Route", widget: NavigateNameRouteApp()),
+
+        //! Navigate With Argument
+        ExampleButton(
+            text: "Navigate With Argument", widget: NavigateWithArgumentApp()),
+
+        //! Pass Data to new Screen
+        ExampleButton(text: "Pass Data to new Screen", widget: PassDataApp()),
       ],
     );
   }

@@ -1,29 +1,30 @@
 import 'package:flutter/material.dart';
 
-class NavigationBackApp extends StatelessWidget {
+class NavigateNameRouteApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: "Navigation",
-      home: FirstRouteDemo(),
+      initialRoute: "/",
+      routes: {
+        "/": (context) => FirstScreen(),
+        "/second": (context) => SecondScreen(),
+      },
     );
   }
 }
 
-class FirstRouteDemo extends StatelessWidget {
+class FirstScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("I am First route"),
+        title: Text("First Screen"),
       ),
       body: Center(
         child: RaisedButton(
-          child: Text("Goto Second Route"),
+          child: Text("Lunch Screen"),
           onPressed: () {
-            //todo: goto Second Route
-            Navigator.push(context,
-                MaterialPageRoute(builder: (context) => SecondRoute()));
+            Navigator.pushNamed(context, "/second");
           },
         ),
       ),
@@ -31,18 +32,17 @@ class FirstRouteDemo extends StatelessWidget {
   }
 }
 
-class SecondRoute extends StatelessWidget {
+class SecondScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("I am Second Route"),
+        title: Text("Second Screen"),
       ),
       body: Center(
         child: RaisedButton(
-          child: Text("Goto First Route"),
+          child: Text("Go Back"),
           onPressed: () {
-            //todo goto Second Route
             Navigator.pop(context);
           },
         ),

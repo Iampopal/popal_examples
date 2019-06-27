@@ -16,10 +16,13 @@ class HeroAnimationApp extends StatelessWidget {
               return DetailScreen();
             }));
           },
-          child: Hero(
-            tag: heroTag,
-            child: Image.network(
-              'https://picsum.photos/250?image=9',
+          child: Center(
+            child: Hero(
+              tag: heroTag,
+              child: Image.asset(
+                'images/me.jpg',
+                width: 200,
+              ),
             ),
           ),
         ),
@@ -39,8 +42,8 @@ class DetailScreen extends StatelessWidget {
         child: Center(
           child: Hero(
             tag: heroTag,
-            child: Image.network(
-              'https://picsum.photos/250?image=9',
+            child: Image.asset(
+              'images/me.jpg',
               fit: BoxFit.fitWidth,
             ),
           ),
