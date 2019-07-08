@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:popal_examples/examples/text_to_speach.dart';
+import 'package:popal_examples/examples/tts.dart';
 import 'package:popal_examples/navigation/hero1.dart';
 import 'package:popal_examples/design/drawer.dart';
 import 'package:popal_examples/design/fonts.dart';
@@ -28,6 +30,10 @@ import 'package:popal_examples/navigation/navigate_name.dart';
 import 'package:popal_examples/navigation/navigate_with_argument.dart';
 import 'package:popal_examples/navigation/navigation_app.dart';
 import 'package:popal_examples/navigation/pass_data.dart';
+import 'package:popal_examples/networking/fetch_data.dart';
+import 'package:popal_examples/presistence/baby_names.dart';
+import 'package:popal_examples/presistence/key_value.dart';
+import 'package:popal_examples/presistence/sqllite_client/sqlite_app.dart';
 import 'package:popal_examples/providers/provide_counter.dart';
 import 'package:popal_examples/providers/shopper_provider/shopper_main.dart';
 import 'animation/animated_app.dart';
@@ -123,112 +129,54 @@ class AppBody extends StatelessWidget {
       crossAxisCount: 2,
       childAspectRatio: MediaQuery.of(context).size.height / 140,
       children: <Widget>[
-        //! Layout
         ExampleButton(text: "Layout", widget: LayoutApp()),
-
-        //! Simple Form With Validation
         ExampleButton(
             text: "Form With Validation", widget: FormWithValidationApp()),
-
-        //! Focus Text Field
         ExampleButton(
             text: "Focus+Design Text Field", widget: FocusDesginTextFieldApp()),
-
-        //! Retrive Text on Change
         ExampleButton(
             text: "Retrive Text+/Field", widget: RetriveTextFieldApp()),
-
-        //! Friendly Chat
         ExampleButton(text: 'Friendly chat', widget: FriendlyChat()),
-
-        //! Add Remove Widget
         ExampleButton(text: 'Add remove widget', widget: ToggleWidget()),
-
-        //! Drawing Fade
         ExampleButton(text: 'Drawing Fade', widget: BasicDrawing()),
-
-        //! Animated Container
         ExampleButton(
             text: 'Animated Container', widget: AnimatedContainerApp()),
-
-        //! My Animated Container
         ExampleButton(text: 'Opacity Animation', widget: OpacityAnimationApp()),
-
-        //! My Drawer App
         ExampleButton(text: 'My Drawer App', widget: MyDrawerApp()),
-
-        //! My Snack bar App
         ExampleButton(text: 'SnackBar', widget: SnackbarDemo()),
-
-        //! Font Asset
         ExampleButton(text: 'Font Assets', widget: FontApp()),
-
-        //! Ui Oientation
         ExampleButton(text: 'Ui Orientation', widget: UiOrientationApp()),
-
-        //! Custom Theme
         ExampleButton(text: 'Custom Theme', widget: ThemeApp()),
-
-        //! Tab Example
         ExampleButton(text: 'Tab App', widget: TabsApp()),
-
-        //! Counter Provier
         ExampleButton(text: 'Counter Provider', widget: ProviderCounterApp()),
-
-        //! Counter Provier
         ExampleButton(
             text: 'My Shopper Provider', widget: MyShopperProviderApp()),
-
-        //! Ripple Button
         ExampleButton(text: 'InkWell Tap', widget: InkWellApp()),
-
-        //! Ripple Button
         ExampleButton(text: 'Guesture Tap', widget: GestureDetuctorApp()),
-
-        //! Ripple Button
         ExampleButton(text: 'Swipable Dismiss', widget: SwipableApp()),
-
-        //! Image Network
         ExampleButton(text: 'Image Network', widget: NetworkImageApp()),
-
-        //! Grid List
         ExampleButton(text: 'Grid List', widget: GridListApp()),
-
-        //! Horizontal List
         ExampleButton(text: 'Horizontal List', widget: HorizontalListApp()),
-
-        //! Mixed List
         ExampleButton(text: 'Mixed List', widget: MixedListApp()),
-
-        //! Floating Appbar List
         ExampleButton(
             text: 'Floating Appbar List', widget: FloatingAppbarListApp()),
-
-        //! Long List
         ExampleButton(text: 'Basic List', widget: BasicListApp()),
-
-        //! Long List
         ExampleButton(text: 'Long List', widget: LongListApp()),
-
-        //! Hero Animation
         ExampleButton(text: 'Hero Animation', widget: HeroAnimationApp()),
-
-        //! Hero 1
         ExampleButton(text: 'Hero 1', widget: Hero1()),
-
-        //! Navigator Raouter
         ExampleButton(text: 'Navigatie and back', widget: NavigationBackApp()),
-
-        //! Navigate to Named Route
         ExampleButton(
             text: "Navigate to Named Route", widget: NavigateNameRouteApp()),
-
-        //! Navigate With Argument
         ExampleButton(
             text: "Navigate With Argument", widget: NavigateWithArgumentApp()),
-
-        //! Pass Data to new Screen
         ExampleButton(text: "Pass Data to new Screen", widget: PassDataApp()),
+        ExampleButton(
+            text: "Network Featch Data", widget: NetworkFeatchDataApp()),
+        ExampleButton(text: "My SQLite", widget: MySQLiteApp()),
+        ExampleButton(text: "Key Value", widget: KeyValueApp()),
+        ExampleButton(text: "Baby Names", widget: BabyNamesApp()),
+        ExampleButton(text: "ُُُTts", widget: TtsApp()),
+        ExampleButton(text: "Text To Speach", widget: TextToSpeachApp()),
       ],
     );
   }

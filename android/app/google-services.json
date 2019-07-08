@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "954849676105",
+    "firebase_url": "https://baby-names-selection.firebaseio.com",
+    "project_id": "baby-names-selection",
+    "storage_bucket": "baby-names-selection.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:954849676105:android:08d63c77e5ece14d",
+        "android_client_info": {
+          "package_name": "com.example.popal_examples"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "954849676105-jvc3q24h6t9h6cn8ce8vusvd26qkjcg2.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDb8EnzJpldjOLf8RN8jLpWCelsinsoVOw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "954849676105-jvc3q24h6t9h6cn8ce8vusvd26qkjcg2.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
