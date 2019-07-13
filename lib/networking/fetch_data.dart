@@ -67,4 +67,3 @@ class NetworkFeatchDataApp extends StatelessWidget {
     );
   }
 }
-`

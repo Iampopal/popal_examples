@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:popal_examples/design/drop_dawn.dart';
+import 'package:popal_examples/examples/basic_app_bar.dart';
 import 'package:popal_examples/examples/text_to_speach.dart';
 import 'package:popal_examples/examples/tts.dart';
 import 'package:popal_examples/navigation/hero1.dart';
@@ -140,7 +142,9 @@ class AppBody extends StatelessWidget {
         ExampleButton(text: 'Add remove widget', widget: ToggleWidget()),
         ExampleButton(text: 'Drawing Fade', widget: BasicDrawing()),
         ExampleButton(
-            text: 'Animated Container', widget: AnimatedContainerApp()),
+          text: 'Animated Container',
+          widget: AnimatedContainerApp(),
+        ),
         ExampleButton(text: 'Opacity Animation', widget: OpacityAnimationApp()),
         ExampleButton(text: 'My Drawer App', widget: MyDrawerApp()),
         ExampleButton(text: 'SnackBar', widget: SnackbarDemo()),
@@ -150,7 +154,9 @@ class AppBody extends StatelessWidget {
         ExampleButton(text: 'Tab App', widget: TabsApp()),
         ExampleButton(text: 'Counter Provider', widget: ProviderCounterApp()),
         ExampleButton(
-            text: 'My Shopper Provider', widget: MyShopperProviderApp()),
+          text: 'My Shopper Provider',
+          widget: MyShopperProviderApp(),
+        ),
         ExampleButton(text: 'InkWell Tap', widget: InkWellApp()),
         ExampleButton(text: 'Guesture Tap', widget: GestureDetuctorApp()),
         ExampleButton(text: 'Swipable Dismiss', widget: SwipableApp()),
@@ -159,24 +165,34 @@ class AppBody extends StatelessWidget {
         ExampleButton(text: 'Horizontal List', widget: HorizontalListApp()),
         ExampleButton(text: 'Mixed List', widget: MixedListApp()),
         ExampleButton(
-            text: 'Floating Appbar List', widget: FloatingAppbarListApp()),
+          text: 'Floating Appbar List',
+          widget: FloatingAppbarListApp(),
+        ),
         ExampleButton(text: 'Basic List', widget: BasicListApp()),
         ExampleButton(text: 'Long List', widget: LongListApp()),
         ExampleButton(text: 'Hero Animation', widget: HeroAnimationApp()),
         ExampleButton(text: 'Hero 1', widget: Hero1()),
         ExampleButton(text: 'Navigatie and back', widget: NavigationBackApp()),
         ExampleButton(
-            text: "Navigate to Named Route", widget: NavigateNameRouteApp()),
+          text: "Navigate to Named Route",
+          widget: NavigateNameRouteApp(),
+        ),
         ExampleButton(
-            text: "Navigate With Argument", widget: NavigateWithArgumentApp()),
+          text: "Navigate With Argument",
+          widget: NavigateWithArgumentApp(),
+        ),
         ExampleButton(text: "Pass Data to new Screen", widget: PassDataApp()),
         ExampleButton(
-            text: "Network Featch Data", widget: NetworkFeatchDataApp()),
+          text: "Network Featch Data",
+          widget: NetworkFeatchDataApp(),
+        ),
         ExampleButton(text: "My SQLite", widget: MySQLiteApp()),
         ExampleButton(text: "Key Value", widget: KeyValueApp()),
         ExampleButton(text: "Baby Names", widget: BabyNamesApp()),
         ExampleButton(text: "ُُُTts", widget: TtsApp()),
         ExampleButton(text: "Text To Speach", widget: TextToSpeachApp()),
+        ExampleButton(text: "Basic App Bar", widget: BasicAppBarApp()),
+        ExampleButton(text: "Drop Dawn", widget: DropDawnApp()),
       ],
     );
   }
